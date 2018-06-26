@@ -1,0 +1,41 @@
+import random
+from time import sleep
+
+numberofGuesses = 0
+number = random.randint(1,100)
+
+name = input("Hello! What is your name? ")
+
+game = "yes"
+
+while game.lower() == "yes" or game.lower() == "yes":
+  print(name + ", I am thinking of a whole number between 1 and 100."); sleep(2)
+  print("Can you guess what it is?"); sleep(1)
+
+  while numberofGuesses < 8:
+    guess = input("Take a guess ")
+    guess = int(guess)
+
+    numberofGuesses = numberofGuesses + 1;
+    guessesLeft = 8 - numberofGuesses;
+
+    if guess < number:
+      guessesLeft=str(guessesLeft)
+      print("Your guess is too low! You have " + guessesLeft + " guesses left")
+
+    if guess > number:
+      guessesLeft=str(guessesLeft)
+      print("Your guess is too high! You have " + guessesLeft + " guesses left")
+
+    if guess==number:
+      break
+
+  if guess==number:
+    numberofGuesses=str(numberofGuesses)
+    print("Good job! You guessed the number in " + numberofGuesses + " tries :)"); sleep(1.5)
+
+  if guess!=number:
+    number=str(number)
+    print("Sorry. The number I was thinking of was " + number + " :)"); sleep(1.5)
+  
+  game = input("Want to play again?")
