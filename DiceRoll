@@ -1,6 +1,7 @@
 import random
 from time import sleep
 
+#function to print "LOADING..." slowly
 def print_slowly(x):
   for c in x:
     print(c, end="")
