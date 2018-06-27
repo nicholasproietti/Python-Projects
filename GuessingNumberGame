@@ -1,21 +1,27 @@
-import random
-from time import sleep
+import random #module to generate random numbers
+from time import sleep #function that pauses program
 
-numberofGuesses = 0
+numberofGuesses = 0 
+
+#random number generated between 1 and 100
 number = random.randint(1,100)
 
-name = input("Hello! What is your name? ")
+#asking for name
+name = input("Hello! What is your name? ") 
 
+#game runs in while loop to allow replays
 game = "yes"
 
 while game.lower() == "yes" or game.lower() == "yes":
   print(name + ", I am thinking of a whole number between 1 and 100."); sleep(2)
   print("Can you guess what it is?"); sleep(1)
-
+  
+  #user has a maximum of 8 guesses
   while numberofGuesses < 8:
     guess = input("Take a guess ")
     guess = int(guess)
 
+    #number of guesses are increment for every input
     numberofGuesses = numberofGuesses + 1;
     guessesLeft = 8 - numberofGuesses;
 
@@ -38,4 +44,5 @@ while game.lower() == "yes" or game.lower() == "yes":
     number=str(number)
     print("Sorry. The number I was thinking of was " + number + " :)"); sleep(1.5)
   
+  #allows replay
   game = input("Want to play again?")
