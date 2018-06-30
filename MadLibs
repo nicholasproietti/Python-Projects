@@ -1,0 +1,43 @@
+from time import sleep
+
+#introduction to game
+print("This is Mad Libs!"); sleep(1.5)
+print("The world's greatest word game!"); sleep(1.5)
+print("Let's write a story together!"); sleep(1.5)
+print("This Mad Lib takes 17 words."); sleep(1.5)
+
+#user fills in the blanks
+relative1 = input("Type a name:")
+adj1 = input("Type an adjective:")
+article = ""
+if adj1[0] in "aeiou":
+  article += "an"
+else:
+  article = "a"
+adj2 = input("Type another adjective:")
+adj3 = input("Type a third adjective:")
+person1 = input("Type a name:")
+adj4 = input("Type an adjective:")
+adj5 = input("Type another adjective:")
+verb1 = input("Type a verb ending in \"ed\":")
+body = input("Type a body part:")
+verb2 = input("Type a verb ending in \"ing\":")
+plural = input("Type a plural noun:")
+noun = input("Type a noun:")
+adverb = input("Type an adverb:")
+verb3 = input("Type a verb:")
+verb4 = input("Type another verb:")
+relative2 = input("Type a name:")
+person2 = input("Type another name:")
+
+#notifies user that story is completed
+print("\nAll set!"); sleep(1.5)
+print("Let's read our story!"); sleep(1.5)
+print("3", end = " "); sleep(1)
+print("2", end = " "); sleep(1)
+print("1", end = " "); sleep(1)
+
+#story
+print("\n\nDear " + relative1 + ", \nI am having " + article + " " + adj1 + " time at camp. The counselour is " + adj2 + " and the food is " + adj3 + ". I met " + person1 + " and we became " + adj4 + " friends. Unfortunately, " + person1 + " is " + adj5 + " and I " + verb1 + " my " + body + " so we couldn`t go " + verb2 + " like everybody else. I need more " + plural + " and a " + noun + " sharpener, so please " + adverb + " " + verb3 + " more when you " + verb4 + " back." +
+"\nYour " + relative2 + "," +
+"\n" + person2)
