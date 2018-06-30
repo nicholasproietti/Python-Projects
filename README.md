@@ -1,2 +1,2 @@
 # Python-Projects
-Python projects developed to build and practice programming knowledge.
+Python projects developed in Python 3 to build and practice programming knowledge.
