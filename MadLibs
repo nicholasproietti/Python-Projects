@@ -9,11 +9,15 @@ print("This Mad Lib takes 17 words."); sleep(1.5)
 #user fills in the blanks
 relative1 = input("Type a name:")
 adj1 = input("Type an adjective:")
+
+#determines appropriate article for adjective 1
 article = ""
 if adj1[0] in "aeiou":
   article += "an"
 else:
   article = "a"
+
+#continue fill in the blanks
 adj2 = input("Type another adjective:")
 adj3 = input("Type a third adjective:")
 person1 = input("Type a name:")
