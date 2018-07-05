@@ -8,31 +8,34 @@ c = ["rock", "paper", "scissors"]
 computer = c[randint(0,2)]
 
 #set player to False, this condition executes the loop
-player = False
+p = False
 
 #game executes here
-while player == False: 
-  player = input("Rock, Paper, or Scissors?")
+while p == False: 
+  p = input("Rock, Paper, or Scissors?")
 
-  if player.lower() == computer:
+  #allows case insensitive input
+  player = p.lower()
+
+  if player == computer:
     print("Tie!")
 
   #scenarios if player chooses paper
-  elif player.lower() == "paper":
+  elif player == "paper":
     if computer == "rock":
       print("You win! Paper covers rock!")
     else:
       print("You lose! Scissors cuts paper!")
 
   #scenarios if player chooses scissors
-  elif player.lower() == "scissors":
+  elif player == "scissors":
     if computer == "paper":
       print("You win! Scissors cuts paper!")
     else:
       print("You lose! Rock crushes scissors!")
 
   #scenarios if player chooses scissors
-  elif player.lower() == "rock":
+  elif player == "rock":
     if computer == "scissors":
       print("You win! Rock crushes scissors!")
     else:
@@ -42,7 +45,7 @@ while player == False:
   sleep(2)
 
   #restarts game, player was set to True
-  player = False
+  p = False
 
   #computer makes new choice
   computer = c[randint(0,2)]
