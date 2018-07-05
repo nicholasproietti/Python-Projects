@@ -36,12 +36,15 @@ while p == False:
     else:
       print("You lose! Rock crushes scissors!")
 
-  #scenarios if player chooses scissors
+  #scenarios if player chooses rock
   elif player == "rock":
     if computer == "scissors":
       print("You win! Rock crushes scissors!")
     else:
       print("You lose! Paper covers rock!")
+      
+  else:
+    print("Invalid input.")
   
   #delays text so player has time to understand the outcome
   sleep(2)
