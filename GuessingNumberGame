@@ -1,3 +1,5 @@
+"""Simple guess the number program."""
+
 import random #module to generate random numbers
 from time import sleep #function that pauses program
 
