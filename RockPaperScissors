@@ -1,0 +1,54 @@
+from time import sleep
+from random import randint
+
+#options for computer when playing game
+c = ["rock", "paper", "scissors"]
+
+#computer chooses one of the three choices
+computer = c[randint(0,2)]
+
+#set player to False, this condition executes the loop
+player = False
+
+#game executes here
+while player == False: 
+  player = input("Rock, Paper, or Scissors?")
+
+  if player.lower() == computer:
+    print("Tie!")
+
+  #scenarios if player chooses paper
+  elif player.lower() == "paper":
+    if computer == "rock":
+      print("You win! Paper covers rock!")
+    else:
+      print("You lose! Scissors cuts paper!")
+
+  #scenarios if player chooses scissors
+  elif player.lower() == "scissors":
+    if computer == "paper":
+      print("You win! Scissors cuts paper!")
+    else:
+      print("You lose! Rock crushes scissors!")
+
+  #scenarios if player chooses scissors
+  elif player.lower() == "rock":
+    if computer == "scissors":
+      print("You win! Rock crushes scissors!")
+    else:
+      print("You lose! Paper covers rock!")
+  
+  #delays text so player has time to understand the outcome
+  sleep(2)
+
+  #restarts game, player was set to True
+  player = False
+
+  #computer makes new choice
+  computer = c[randint(0,2)]
+
+
+
+
+
+
