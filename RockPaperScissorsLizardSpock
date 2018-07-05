@@ -1,0 +1,92 @@
+#Simple program where the player and computer compete in the "Rock, Paper, Scissors, Lizard, Spock" game from the television show "The Big Bang Theory"
+
+from time import sleep
+from random import randint
+
+#options for computer when playing game
+c = ["rock", "paper", "scissors, lizard, spock"]
+
+#computer chooses one of the three choices
+computer = c[randint(0,4)]
+
+#set player to False, this condition executes the loop
+p = False
+
+#game executes here
+while p == False: 
+  p = input("Rock, Paper, Scissors, Lizard, or Spock?")
+
+  #allows case insensitive input
+  player = p.lower()
+
+  if player == computer:
+    print("Tie!")
+
+  #scenarios if player chooses paper
+  elif player == "paper":
+    if computer == "rock":
+      print("You win! Paper covers rock!")
+    elif computer == "scissors":
+      print("You lose! Scissors cuts paper!")
+    elif computer == "lizard":
+      print("You lose! Lizard eats paper!")
+    else:
+      print("You win! Paper disproves Spock!")
+
+  #scenarios if player chooses scissors
+  elif player == "scissors":
+    if computer == "paper":
+      print("You win! Scissors cuts paper!")
+    elif computer == "rock":
+      print("You lose! Rock crushes scissors!")
+    elif computer == "lizard":
+      print("You win! Scissors decapitates lizard!")
+    else:
+      print("You lose! Spock smashes scissors!")
+
+  #scenarios if player chooses rock
+  elif player == "rock":
+    if computer == "scissors":
+      print("You win! Rock crushes scissors!")
+    elif computer == "paper":
+      print("You lose! Paper covers rock!")
+    elif computer == "lizard":
+      print("You win! Rock crushes lizard!")
+    else:
+      print("You lose! Spock vaporizes rock!")
+
+  #scenarios if player chooses lizard
+  elif player == "lizard":
+    if computer == "paper":
+      print("You win! Lizard eats paper!")
+    elif computer == "scissors":
+      print("You lose! Scissors decapitates lizard!")
+    elif computer == "rock":
+      print("You lose! Rock crushes lizard!")
+    else:
+      print("You win! Lizard poisons Spock!")
+
+  #scenarios if player chooses spock
+  elif player == "spock":
+    if computer == "paper":
+      print("You lose! Paper disproves Spock!")
+    elif computer == "scissors":
+      print("You win! Spock smashes scissors!")
+    elif computer == "rock":
+      print("You win! Spock vaporizes rock!")
+    else: 
+      print("You lose! Lizard poisons Spock!")
+      
+  else:
+    print("Invalid input.")
+  
+  #delays text so player has time to understand the outcome
+  sleep(2)
+
+  #restarts game, player was set to True
+  p = False
+
+  #computer makes new choice
+  computer = c[randint(0,2)]
+
+
