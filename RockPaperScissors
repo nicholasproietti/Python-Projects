@@ -1,4 +1,4 @@
-"""Simple program where the player and computer compete in the popular "Rock, Paper, Scissors" game"""
+#Simple program where the player and computer compete in the popular "Rock, Paper, Scissors" game
 
 from time import sleep
 from random import randint
