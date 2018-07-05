@@ -1,4 +1,4 @@
-"""Simple two dice rolling program."""
+#Simple two dice rolling program
 
 import random
 from time import sleep
