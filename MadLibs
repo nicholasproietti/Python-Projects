@@ -1,3 +1,5 @@
+"""Program that emulates the popular phrasal template game "Mad Libs"."""
+
 from time import sleep
 
 #introduction to game
